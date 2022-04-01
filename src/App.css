@@ -6,3 +6,6 @@
 body {
   background-color: var(--blue-gray);
 }
+.disabled {
+  display: none;
+}
