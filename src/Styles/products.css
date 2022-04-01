@@ -1,0 +1,100 @@
+/* Grid layout */
+
+.pageContainer {
+  background-color: var(--snow);
+  display: grid;
+  width: 100%;
+  grid-template-columns: [col1]20rem [col2]auto [col3];
+}
+
+/* aside filtering component */
+
+.filters {
+  background-color: var(--blue-gray);
+  padding: 1rem;
+  color: var(--snow);
+}
+.filterHead {
+  display: flex;
+  justify-content: space-between;
+}
+.filters .btn {
+  font-size: initial;
+  cursor: pointer;
+  color: var(--snow);
+  text-decoration-color: var(--snow);
+}
+.filters .btn-link-dot {
+  text-decoration-style: solid;
+}
+.filters input {
+  accent-color: var(--snow);
+}
+.filters input[type="radio"],
+.filters input[type="checkbox"] {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.filters input[type="radio"] {
+  accent-color: var(--darc);
+}
+#myRange {
+  cursor: pointer;
+  width: 15rem;
+}
+/* Main product display page grid layout */
+
+.pageContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 2rem;
+}
+
+/* card component */
+
+.productCard {
+  border-radius: 3px;
+  background-color: var(--blue-gray);
+  box-shadow: 0px 0px 8px 4px var(--lighter-gray),
+    0px 0px 2px 2px var(--lighter-gray);
+}
+.productCard img {
+  border-radius: 3px;
+}
+.productCard .btn {
+  border-color: var(--snow);
+  font-size: 1.2rem;
+  border-radius: 3px;
+  padding: 0.4rem 0.7rem;
+  box-shadow: 0px 0px 4px 1px var(--slight-gray);
+}
+.productCard .priceContainer {
+  border-radius: 3px;
+  background-color: var(--snow);
+  color: var(--darc);
+}
+
+/* add to card button */
+
+.productCard .btn-success {
+  background-color: var(--light-success);
+  color: var(--snow);
+}
+.productCard .btn-success:hover {
+  background-color: var(--success);
+  border-color: var(--success);
+  box-shadow: none;
+}
+/* wishlisht button */
+
+.productCard .btn-primary {
+  background-color: var(--light-caution);
+  color: var(--snow);
+}
+.productCard .btn-primary:hover {
+  background-color: var(--caution);
+  border-color: var(--caution);
+  box-shadow: none;
+}

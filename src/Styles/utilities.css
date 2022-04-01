@@ -1,0 +1,33 @@
+.flex {
+  display: flex;
+}
+.flex-spc-btw {
+  justify-content: space-between;
+}
+.flex-spc-arnd {
+  justify-content: space-around;
+}
+.align-middle {
+  align-items: center;
+}
+.align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.half-wrapper {
+  width: 50%;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col-rev {
+  flex-direction: column-reverse;
+}
+.flex-row-rev {
+  flex-direction: row-reverse;
+}

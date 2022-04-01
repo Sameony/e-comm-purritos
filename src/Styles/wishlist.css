@@ -1,0 +1,36 @@
+.wishWrap {
+  background-color: var(--blue-gray);
+}
+.wishWrap h1 {
+  color: var(--snow);
+}
+.wishStrip {
+  color: var(--darc);
+  background-color: var(--snow);
+  display: grid;
+  grid-template-columns:
+    4rem minmax(13rem, 1fr)
+    minmax(10rem, 1fr) 11rem minmax(10rem, 0.6fr);
+  grid-template-rows: 5rem;
+  gap: 1rem;
+}
+.wishContainer .wishStrip {
+  grid-template-rows: 10rem;
+}
+.wishStrip h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wishImg {
+  overflow: hidden;
+  padding: 1rem;
+}
+.wishActionButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wishActionButtons .btn {
+  padding: 1rem 2rem;
+}
