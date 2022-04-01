@@ -1,0 +1,64 @@
+@import url("https://mirinda-mewi.netlify.app/styles/main.css");
+@import url(/src/Styles/products.css);
+@import url(/src/Styles/landing.css);
+@import url(/src/Styles/colors.css);
+@import url(/src/Styles/wishlist.css);
+@import url(/src/Styles/loginSignup.css);
+@import url(/src/Styles/utilities.css);
+@import url(/src/Styles/cart.css);
+
+/* Navigation */
+.navBar {
+  background-color: var(--darc);
+  color: var(--snow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBar h1 {
+  cursor: pointer;
+}
+.navBar .badgeWrap {
+  cursor: pointer;
+}
+.rightNav {
+  display: flex;
+}
+.rightNav .badgeWrap {
+  padding: 0.2rem;
+}
+.rightNav .btn {
+  align-self: center;
+}
+.boxInput {
+  width: 32rem;
+  display: flex;
+  align-items: center;
+}
+.navBar .btn {
+  background-color: var(--light-gray);
+  border-color: var(--light-gray);
+  color: var(--darc);
+}
+.navBar .btn:hover {
+  background-color: var(--lighter-gray);
+  border-color: var(--lighter-gray);
+}
+.searchBox {
+  width: 80%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--snow);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+}

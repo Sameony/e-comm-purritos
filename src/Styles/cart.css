@@ -1,0 +1,77 @@
+.cartPage {
+  height: calc(100vh - 11.45rem);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  background-color: var(--blue-gray);
+  overflow: hidden;
+}
+.cartWrap {
+  overflow: auto;
+}
+.cartWrap h1 {
+  color: var(--snow);
+}
+.cartStrip {
+  margin: 1rem auto;
+  width: 80%;
+  color: var(--darc);
+  background-color: var(--snow);
+  display: grid;
+  grid-template-columns:
+    minmax(10rem, 0.7fr)
+    minmax(13rem, 1fr);
+  grid-template-rows: 15rem;
+  gap: 1rem;
+}
+.cartDetails h3 {
+  text-align: left;
+}
+.cartQty .btn {
+  padding: 0.35rem 0.5rem;
+  place-content: center;
+  border-radius: 2px;
+}
+.cartQty input {
+  padding: 0.3rem;
+  width: 4rem;
+  text-align: center;
+}
+.cartQty .btn-primary {
+  background-color: var(--gray);
+  border-color: var(--gray);
+  color: var(--snow);
+}
+.cartQty .btn-primary:hover {
+  background-color: var(--blue-gray);
+  border-color: var(--blue-gray);
+}
+.btn-wishlist {
+  color: var(--snow);
+  background-color: var(--caution);
+  border: none;
+}
+.btn-wishlist:hover {
+  background-color: var(--light-caution);
+}
+.cartImg {
+  overflow: hidden;
+}
+.cartActionButtons {
+  width: 100%;
+}
+.cartActionButtons .btn-primary {
+  background-color: var(--slight-gray);
+  border-color: var(--slight-gray);
+  color: var(--blue-gray);
+}
+.cartActionButtons .btn-primary:hover {
+  background-color: var(--lighter-gray);
+}
+.checkout {
+  background-color: var(--snow);
+  color: var(--blue-gray);
+}
+.checkout .btn {
+  width: 100%;
+}
