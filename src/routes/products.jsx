@@ -1,14 +1,15 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import { Filters, ProductCard } from '../components'
-import { ProductContext } from '../context/productContext'
+import { GetProducts } from '../context/productContext'
 const Products = () => {
-  const prodList = useContext(ProductContext);
+  const prodList = GetProducts();
   return (
     <div className="pageContainer">
       <Filters />
       <div className="pageContent pd-md">
          {prodList.map((item)=>{
-           return <ProductCard 
+           return <ProductCard
+           key={item._id} 
            cardTitle={item.title}
            cardReviews={item.reviews} 
            cardRating={item.rating} 
