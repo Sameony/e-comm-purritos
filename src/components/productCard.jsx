@@ -1,21 +1,22 @@
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = ({cardTitle, cardReviews, cardRating, Price, prevPrice, img}) => {
   return (
     <div className="productCard pd-sm mg-sm">
-                <img src="Images/kyotAsleep.jpg" alt="red blanket for a cat" />
+                <img src={img} alt="red blanket for a cat" />
                 <div className="cardContent">
                     <div className="priceContainer mg-y-sm pd-sm">
-                        <h3 className="cardHead">White Blanket</h3>
+                        <h3 className="cardHead">{cardTitle}</h3>
                         <div className="rateMe prim-color">
                             <i className="fas fa-star"></i>
                             <i className="fas fa-star"></i>
                             <i className="fas fa-star"></i>
                             <i className="fas fa-star"></i>
                             <i className="far fa-star"></i>
+                            <span>({cardReviews} Reviews)</span>
                         </div>
-                        <div className="productPrice fw-xxl"><i className="fas fa-rupee-sign"></i> 8999
-                            <strike className="fs-sm"><i className="fas fa-rupee-sign mg-l-sm"></i>14400</strike>
+                        <div className="productPrice fw-xxl"><i className="fas fa-rupee-sign"></i> {Price}
+                            {prevPrice?<strike className="fs-sm"><i className="fas fa-rupee-sign mg-l-sm"></i>{prevPrice}</strike>:``}
                         </div>
 
                     </div>
