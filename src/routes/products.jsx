@@ -1,7 +1,7 @@
 import React from "react";
 import { Filters, ProductCard } from "../components";
-import { useFilters } from "../context/filterContext";
-import { EmptyProduct } from "../components/emptyProduct";
+import { useFilters } from "../utils";
+import { EmptyProduct } from "../components";
 const Products = () => {
   const prodList = useFilters().filteredList;
   const productMapping = () =>
@@ -19,7 +19,10 @@ const Products = () => {
       );
     });
   return (
-    <div className="pageContainer">
+    <>
+     <div className="navShadow"></div>
+     <div className="pageContainer">
+      
       <Filters />
       <div></div>
       {prodList.length ? (
@@ -27,7 +30,8 @@ const Products = () => {
       ) : (
         <EmptyProduct />
       )}
-    </div>
+    </div></>
+    
   );
 };
 

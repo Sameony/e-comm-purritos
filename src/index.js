@@ -5,7 +5,7 @@ import App from "./App";
 import {
   BrowserRouter as Router
 } from 'react-router-dom';
-import { FilterContextProvider } from "./context/filterContext";
+import { FilterContextProvider } from "./utils/filterContext";
 import { makeServer } from "./server";
 
 // Call make Server

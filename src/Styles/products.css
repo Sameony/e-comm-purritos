@@ -4,7 +4,7 @@
   background-color: var(--snow);
   display: grid;
   width: 100%;
-  grid-template-columns: [col1] 20rem [col2] auto [col3];
+  grid-template-columns: [col1] 18rem [col2] auto [col3];
 }
 
 /* aside filtering component */
@@ -55,7 +55,7 @@
 .pageContent {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   grid-template-rows: repeat(auto-fill, 29rem);
   gap: 2rem;
 }

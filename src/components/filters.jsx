@@ -1,5 +1,5 @@
 import React from 'react'
-import { useFilters } from '../context/filterContext';
+import { useFilters } from '../utils';
 const Filters = () => {
     const { state, filterDispatch } = useFilters();
   return (

@@ -1,5 +1,5 @@
-import { filterReducer } from "../reducers/filterReducer";
-import { sortprodList, ratingFunction, CategoryHandler, pricingFunction } from "../utils/filterComposition";
+import { filterReducer } from "./filterReducer";
+import { sortprodList, ratingFunction, CategoryHandler, pricingFunction } from "./filterComposition";
 import { GetProducts } from "./productContext";
 import { createContext, useContext, useReducer } from "react";
 
