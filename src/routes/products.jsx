@@ -1,8 +1,9 @@
 import React from 'react'
 import { Filters, ProductCard } from '../components'
-import { GetProducts } from '../context/productContext'
+import { useFilters } from '../context/filterContext'
 const Products = () => {
-  const prodList = GetProducts();
+  const prodList2 = useFilters();
+  const prodList = prodList2.filteredList
   return (
     <div className="pageContainer">
       <Filters />

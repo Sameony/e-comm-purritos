@@ -4,10 +4,10 @@ import { useFilters } from '../context/filterContext';
 const Filters = () => {
     const { state, filterDispatch } = useFilters();
   return (
-    <aside className="filters">
+    <form className="filters">
             <div className="filterHead">
                 <h2>Filters</h2>
-                <h4 className="btn btn-link-dot" onClick={() => filterDispatch({ type: "RESET" })}>Clear</h4>
+                <button type="reset "className="btn btn-link-dot" onClick={() => filterDispatch({ type: "RESET" })}>Clear</button>
             </div>
             <div className="priceSlide">
                 <h3>Price</h3>
@@ -20,12 +20,15 @@ const Filters = () => {
             </div>
             <div className="mg-y-md">
                 <h3>Category</h3>
-                <input type="checkbox" className="mg-sm" name="shopping" id="RedBurrito" />
-                <label for="RedBurrito">Red Blankets</label> <br />
-                <input type="checkbox" className="mg-sm" name="shopping" id="whiteBurrito" />
-                <label for="whiteBurrito">White Blankets</label> <br />
-                <input type="checkbox" className="mg-sm" name="shopping" id="BlackBurrito" />
-                <label for="BlackBurrito">Black Blankets</label> <br />
+                <input type="checkbox" className="mg-sm" name="shopping" id="plainBlankets" value="plain-blankets" checked={state.category.includes("plain-blankets")}
+                onChange={(e) =>filterDispatch({ type: "CATEGORY", payload: e.target.value })}/>
+                <label for="plainBlankets">Plain-Blankets</label> <br />
+                <input type="checkbox" className="mg-sm" name="shopping" id="pattern-blankets" value="pattern-blankets" checked={state.category.includes("pattern-blankets")}
+                onChange={(e) =>filterDispatch({ type: "CATEGORY", payload: e.target.value })}/>
+                <label for="pattern-blankets">Pattern Blankets</label> <br />
+                <input type="checkbox" className="mg-sm" name="shopping" id="sweaters" value="sweaters" checked={state.category.includes("sweaters")}
+                onChange={(e) =>filterDispatch({ type: "CATEGORY", payload: e.target.value })} />
+                <label for="sweaters">Sweaters &#38; hoodies</label> <br />
             </div>
             <div className="mg-y-md">
                 <h3>Ratings</h3>
@@ -45,7 +48,7 @@ const Filters = () => {
                 <input className="mg-sm" type="radio" name="sortby" value="RATING" id="sortByRating" onClick={(e) => filterDispatch({ type: "SORT", payload: e.target.value })}  />
                 <label for="sortByRating">Ratings</label> <br />
             </div>
-        </aside>
+        </form>
   )
 }
 
