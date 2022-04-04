@@ -27,15 +27,17 @@ const ProductCard = ({cardTitle, cardReviews, cardRating, Price, prevPrice, img}
 
                     </div>
                 </div>
-                
+                <div className="wishListIcon flex align-items-center">
+                    <i className="far fa-heart fs-lg"></i>
+                </div>
                 <div className='cardActionButtons'>
-                <button className="btn btn-success fs-md mg-t-sm"><i className="fas fa-shopping-cart mg-r-sm"></i>Add to
+                    <button className="btn btn-success fs-md mg-t-sm"><i className="fas fa-shopping-cart mg-r-sm"></i>Add to
                         Cart</button>
                 </div>
                     
                     
 
-            </div>
+    </div>
   )
 }
 

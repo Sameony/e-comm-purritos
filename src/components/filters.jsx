@@ -13,7 +13,7 @@ const Filters = () => {
                 <input type="range" min="500" max="25000" list="tickmarks" value={state.maxPrice} className="slider mg-sm" id="myRange" 
                 onChange={(e) =>filterDispatch({ type: "MAXPRICE", payload: e.target.value }) }/>
                 
-                <p className='mg-l-sm'>MaxPrice: <span className='snippets mg-l-sm'>{state.maxPrice}</span></p>
+                <p className='mg-l-sm'>MaxPrice: <span className='snippets mg-l-sm'><i className="fas fa-rupee-sign mg-r-sm"></i>{state.maxPrice}</span></p>
             </div>
             <div className="mg-y-md Categories">
                 <h3>Category</h3>

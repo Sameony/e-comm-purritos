@@ -56,6 +56,7 @@
 .pageContent {
   width: 100%;
   display: grid;
+  place-content: center;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   grid-template-rows: repeat(auto-fill, 29rem);
   gap: 2rem;
@@ -64,6 +65,7 @@
 /* card component */
 
 .productCard {
+  position: relative;
   border-radius: 3px;
   box-shadow: 0px 0px 8px 4px var(--lighter-gray),
     0px 0px 2px 2px var(--lighter-gray);
@@ -115,4 +117,20 @@
   background-color: var(--caution);
   border-color: var(--caution);
   box-shadow: none;
+}
+
+.wishListIcon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: var(--snow);
+  border-radius: 50%;
+  padding: 6px;
+  color: var(--caution);
+  cursor: pointer;
+}
+
+.wishListIcon:hover {
+  transition: all ease-in 0.5s;
+  transform: rotateY(360deg);
 }
