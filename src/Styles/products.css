@@ -4,14 +4,14 @@
   background-color: var(--snow);
   display: grid;
   width: 100%;
-  grid-template-columns: [col1] 18rem [col2] auto [col3];
+  grid-template-columns: [col1] 20rem [col2] auto [col3];
 }
 
 /* aside filtering component */
 
 .filters {
   background-color: var(--darc);
-  padding: 1rem;
+  padding: 0 2rem;
   color: var(--snow);
   position: fixed;
   top: 0;
