@@ -1,13 +1,15 @@
 export const filterReducer = (state, action) => {
   const defaultState = {
     sort: "",
-    rating: 5,
+    rating: "",
     category: [],
-    maxPrice: 25000,
+    maxPrice: 10000,
   };
   switch (action.type) {
     case "RATINGS":
       return { ...state, rating: action.payload };
+    case "MAXPRICE":
+      return { ...state, maxPrice: action.payload };
     case "CATEGORY":
       const { category } = state;
       if (category.includes(action.payload)) {

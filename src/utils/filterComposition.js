@@ -4,6 +4,12 @@ export const ratingFunction = (state, prodList) => {
     ? prodList
     : prodList.filter((product) => product.rating >= rating);
 };
+
+export const pricingFunction = (state, prodList) => {
+  const { maxPrice } = state;
+  return prodList.filter((product) => product.price <= maxPrice);
+};
+
 export const sortprodList = (state, prodList) => {
   switch (state.sort) {
     case "PRICE":
