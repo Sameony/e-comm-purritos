@@ -14,9 +14,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .navBar h1 {
   cursor: pointer;
+}
+.navShadow {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  height: 1rem;
 }
 .navBar .badgeWrap {
   cursor: pointer;

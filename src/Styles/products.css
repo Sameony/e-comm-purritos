@@ -4,17 +4,25 @@
   background-color: var(--snow);
   display: grid;
   width: 100%;
-  grid-template-columns: [col1]20rem [col2]auto [col3];
+  grid-template-columns: [col1] 20rem [col2] auto [col3];
 }
 
 /* aside filtering component */
 
 .filters {
-  background-color: var(--blue-gray);
-  padding: 1rem;
+  background-color: var(--darc);
+  padding: 0 2rem;
   color: var(--snow);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.filters .snippets {
+  background-color: var(--lighter-gray);
 }
 .filterHead {
+  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -48,27 +56,39 @@
 .pageContent {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  place-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-rows: repeat(auto-fill, 29rem);
   gap: 2rem;
 }
 
 /* card component */
 
 .productCard {
+  position: relative;
   border-radius: 3px;
-  background-color: var(--blue-gray);
   box-shadow: 0px 0px 8px 4px var(--lighter-gray),
     0px 0px 2px 2px var(--lighter-gray);
 }
 .productCard img {
   border-radius: 3px;
 }
-.productCard .btn {
-  border-color: var(--snow);
-  font-size: 1.2rem;
+.productImage {
+  height: 14rem;
+  overflow: hidden;
+}
+.cardContent {
   border-radius: 3px;
-  padding: 0.4rem 0.7rem;
-  box-shadow: 0px 0px 4px 1px var(--slight-gray);
+  height: 9rem;
+  background-color: var(--snow);
+}
+.cardActionButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cardActionButtons .btn {
+  border-radius: 3px;
 }
 .productCard .priceContainer {
   border-radius: 3px;
@@ -97,4 +117,20 @@
   background-color: var(--caution);
   border-color: var(--caution);
   box-shadow: none;
+}
+
+.wishListIcon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: var(--snow);
+  border-radius: 50%;
+  padding: 6px;
+  color: var(--caution);
+  cursor: pointer;
+}
+
+.wishListIcon:hover {
+  transition: all ease-in 0.5s;
+  transform: rotateY(360deg);
 }

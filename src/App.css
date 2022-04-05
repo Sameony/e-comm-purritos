@@ -3,9 +3,7 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: var(--blue-gray);
-}
+
 .disabled {
   display: none;
 }

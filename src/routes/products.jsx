@@ -1,18 +1,38 @@
-import React from 'react'
-import { Filters, ProductCard } from '../components'
+import React from "react";
+import { Filters, ProductCard } from "../components";
+import { useFilters } from "../utils";
+import { EmptyProduct } from "../components";
 const Products = () => {
+  const prodList = useFilters().filteredList;
+  const productMapping = () =>
+    prodList.map((item) => {
+      return (
+        <ProductCard
+          key={item._id}
+          cardTitle={item.title}
+          cardReviews={item.reviews}
+          cardRating={item.rating}
+          Price={item.price}
+          prevPrice={item.prevPrice}
+          img={item.imageUrl}
+        />
+      );
+    });
   return (
-    <div className="pageContainer">
+    <>
+     <div className="navShadow"></div>
+     <div className="pageContainer">
+      
       <Filters />
-      <div className="pageContent pd-md">
-        <ProductCard />  
-        <ProductCard />  
-        <ProductCard />  
-        <ProductCard />  
-        <ProductCard />  
-      </div>
-    </div>
-  )
-}
+      <div></div>
+      {prodList.length ? (
+        <div className="pageContent pd-md">{productMapping()}</div>
+      ) : (
+        <EmptyProduct />
+      )}
+    </div></>
+    
+  );
+};
 
-export default Products
+export default Products;

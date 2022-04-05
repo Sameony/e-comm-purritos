@@ -7,4 +7,5 @@ import Footer from "./footer";
 import HeroBanner from "./heroBanner";
 import Filters from "./filters";
 import Checkout from "./checkout";
-export {CartCard, FeaturedCard, Footer, NavBar, WishCard, ProductCard, HeroBanner, Filters, Checkout};
+import { EmptyProduct } from "./emptyProduct";
+export {CartCard, FeaturedCard, Footer, NavBar, WishCard, ProductCard, HeroBanner, Filters, Checkout, EmptyProduct};
