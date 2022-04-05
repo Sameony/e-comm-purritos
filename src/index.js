@@ -6,6 +6,7 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 import { FilterContextProvider } from "./utils/filterContext";
+import { WishlistContextProvider } from "./utils/wishlistContext";
 import { makeServer } from "./server";
 
 // Call make Server
@@ -14,9 +15,11 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <FilterContextProvider>
-        <App />
-      </FilterContextProvider>
+      <WishlistContextProvider>
+        <FilterContextProvider>
+          <App />
+        </FilterContextProvider>
+      </WishlistContextProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
