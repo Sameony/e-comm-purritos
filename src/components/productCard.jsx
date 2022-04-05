@@ -1,13 +1,28 @@
 import React from 'react'
+import { IsItemInWishList } from '../utils/wishlistReducer';
+import { useWishlist } from '../utils/wishlistContext';
 
-const ProductCard = ({cardTitle, cardReviews, cardRating, Price, prevPrice, img}) => {
+const ProductCard = ({id, cardTitle, cardReviews, cardRating, Price, prevPrice, img}) => {
+    const {dispatchWish} = useWishlist();
     const rounded = Math.round(cardRating*2)/2
     const hasDecimal = rounded%1!==0;
     const roundedWhole = Math.floor(rounded);
     const stars = hasDecimal?roundedWhole+1:roundedWhole;
+    
+    const defaultState = {
+        id : id,
+        imageUrl: img,
+        title: cardTitle,
+        price: Price,
+    }
   return (
     <div className="productCard pd-sm mg-sm">
-                <div className='productImage flex align-items-center'><img src={img} alt={img} /></div>
+                <div className='productImage flex align-items-center'><img src={img} alt={cardTitle} /></div>
+                <div className="wishListIcon flex align-items-center">
+                    {IsItemInWishList(id)===false?(<i className="far fa-heart fs-lg" onClick={()=>dispatchWish({type:"WISH_ADD",payload:defaultState})}></i>)
+                    :(<i className="fas fa-heart fs-lg" onClick={()=>dispatchWish({type:"WISH_REMOVE",payload:defaultState})}></i>)}
+                    
+                </div>
                 <div className="cardContent">
                     <div className="priceContainer mg-y-sm pd-sm">
                         <h3 className="cardHead">{cardTitle}</h3>
@@ -27,9 +42,7 @@ const ProductCard = ({cardTitle, cardReviews, cardRating, Price, prevPrice, img}
 
                     </div>
                 </div>
-                <div className="wishListIcon flex align-items-center">
-                    <i className="far fa-heart fs-lg"></i>
-                </div>
+                
                 <div className='cardActionButtons'>
                     <button className="btn btn-success fs-md mg-t-sm"><i className="fas fa-shopping-cart mg-r-sm"></i>Add to
                         Cart</button>
