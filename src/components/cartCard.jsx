@@ -1,15 +1,15 @@
 import React from "react";
 
-const CartCard = () => {
+const CartCard = (Title, img, price) => {
   return (
     <div className="cartStrip mg-y-md">
       <div className="cartImg align-items-center">
-        <img src="/Images/kyotComfy.jpg" alt="kyot cat" />
+        <img src={img} alt={Title} />
       </div>
       <div className="cartDetails align-items-center flex-col">
-        <h3>White blanket</h3>
+        <h3>{Title}</h3>
         <h3 className="fw-xl">
-          <i className="fa-solid fa-indian-rupee-sign mg-r-sm"></i>11999
+          <i className="fa-solid fa-indian-rupee-sign mg-r-sm"></i>{price}
         </h3>
         <div className="cartQty">
           <button className="btn btn-primary">&nbsp;-&nbsp;</button>
