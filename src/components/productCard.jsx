@@ -1,23 +1,14 @@
 import React from 'react'
 import { IsItemInWishList } from '../utils/wishlistReducer';
 import { useWishlist } from '../utils/wishlistContext';
-import { useCart } from '../utils/cartContext';
-import { IsItemInCart } from '../utils/cartReducer';
-import { Link } from "react-router-dom";
+
 const ProductCard = ({id, cardTitle, cardReviews, cardRating, Price, prevPrice, img}) => {
     const {dispatchWish} = useWishlist();
-    const {dispatchCart} = useCart();
     const rounded = Math.round(cardRating*2)/2
     const hasDecimal = rounded%1!==0;
     const roundedWhole = Math.floor(rounded);
     const stars = hasDecimal?roundedWhole+1:roundedWhole;
-    const cartDefault = {
-        id : id,
-        imageUrl: img,
-        title: cardTitle,
-        price: Price,
-        quantity: 1,
-    }
+    
     const defaultState = {
         id : id,
         imageUrl: img,
@@ -53,13 +44,8 @@ const ProductCard = ({id, cardTitle, cardReviews, cardRating, Price, prevPrice, 
                 </div>
                 
                 <div className='cardActionButtons'>
-                    {IsItemInCart(id)===false?(<button className="btn btn-success fs-md mg-t-sm" onClick={()=>dispatchCart({type:"CART_ADD",payload:cartDefault})}>
-                                <i className="fas fa-shopping-cart mg-r-sm"> Add to Cart </i>
-                            </button>)
-                        :(<button className="btn btn-success fs-md mg-t-sm textCenter">
-                                <Link to="/Cart" className="fas fa-shopping-cart mg-r-sm">Go to Cart</Link>
-                            </button>)
-                    }
+                    <button className="btn btn-success fs-md mg-t-sm"><i className="fas fa-shopping-cart mg-r-sm"></i>Add to
+                        Cart</button>
                 </div>
                     
                     
