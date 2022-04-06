@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { useWishlist } from "../utils/wishlistContext";
 const NavBar = () => {
+  const {state} = useWishlist();
   return (
       <>
     <nav className="navBar">
@@ -23,13 +25,13 @@ const NavBar = () => {
           <Link to="cart">
             <div className="fs-xl fas fa-shopping-cart"></div>
           </Link>
-          <div className="fs-sm badge badgeTopRight badgeRed">2</div>
+          <div className="fs-sm badge badgeTopRight badgeRed">8</div>
         </div>
         <div className="badgeWrap mg-md">
           <Link to="/wishlist">
             <div className="fs-xl fas fa-heart"></div>
           </Link>
-          <div className="fs-sm badge badgeTopRight badgeRed">9+</div>
+          <div className="fs-sm badge badgeTopRight badgeRed">{state.wishlistItems.length>9?("9+"):state.wishlistItems.length}</div>
         </div>
       </div>
     </nav>

@@ -29,25 +29,25 @@ const Filters = () => {
             </div>
             <div className="mg-y-md Ratings">
                 <h3>Ratings</h3>
-                <input className="mg-sm" type="radio" value="4" checked={state.rating === "4"} name="rating"  onClick={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="fourStar"  />
+                <input className="mg-sm" type="radio" value="4" checked={state.rating === "4"} name="rating"  onChange={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="fourStar"  />
                 <label htmlFor="fourStar">4 <i className="fas fa-star"></i> and up</label> <br />
-                <input className="mg-sm" type="radio" value="3" checked={state.rating === "3"} name="rating" onClick={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="threeStar" />
+                <input className="mg-sm" type="radio" value="3" checked={state.rating === "3"} name="rating" onChange={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="threeStar" />
                 <label htmlFor="threeStar">3 <i className="fas fa-star"></i> and up</label> <br />
-                <input className="mg-sm" type="radio" value="2" checked={state.rating === "2"} name="rating" onClick={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="twoStar" />
+                <input className="mg-sm" type="radio" value="2" checked={state.rating === "2"} name="rating" onChange={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="twoStar" />
                 <label htmlFor="twoStar">2 <i className="fas fa-star"></i> and up</label> <br />
-                <input className="mg-sm" type="radio" value="1" checked={state.rating === "1"} name="rating" onClick={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="oneStar" />
+                <input className="mg-sm" type="radio" value="1" checked={state.rating === "1"} name="rating" onChange={(e) => filterDispatch({ type: "RATINGS", payload:e.target.value })} id="oneStar" />
                 <label htmlFor="oneStar">1 &nbsp;<i className="fas fa-star"></i> and up</label> <br />
             </div>
             
             <div className="mg-y-md Sorting">
                 <h3>Sort By</h3>
-                <input name="sort" checked={state.sort === "PRICE_A"} className="mg-sm" type="radio" value="PRICE_A"  id="sortByPrice" onClick={(e) => filterDispatch({ type: "SORT", payload: e.target.value })} />
+                <input name="sort" checked={state.sort === "PRICE_A"} className="mg-sm" type="radio" value="PRICE_A"  id="sortByPrice" onChange={(e) => filterDispatch({ type: "SORT", payload: e.target.value })} />
                 <label htmlFor="sortByPrice">Price(Low to High)</label> <br />
-                <input name="sort" checked={state.sort === "PRICE_D"} className="mg-sm" type="radio" value="PRICE_D"  id="sortByPrice" onClick={(e) => filterDispatch({ type: "SORT", payload: e.target.value })} />
+                <input name="sort" checked={state.sort === "PRICE_D"} className="mg-sm" type="radio" value="PRICE_D"  id="sortByPrice" onChange={(e) => filterDispatch({ type: "SORT", payload: e.target.value })} />
                 <label htmlFor="sortByPrice">Price(High to Low)</label> <br />
-                <input className="mg-sm" type="radio" checked={state.sort === "RATING_A"} name="sort" value="RATING_A" id="sortByRating" onClick={(e) => filterDispatch({ type: "SORT", payload: e.target.value })}  />
+                <input className="mg-sm" type="radio" checked={state.sort === "RATING_A"} name="sort" value="RATING_A" id="sortByRating" onChange={(e) => filterDispatch({ type: "SORT", payload: e.target.value })}  />
                 <label htmlFor="sortByRating">Ratings(Low to High)</label> <br />
-                <input className="mg-sm" type="radio" checked={state.sort === "RATING_D"} name="sort" value="RATING_D" id="sortByRating" onClick={(e) => filterDispatch({ type: "SORT", payload: e.target.value })}  />
+                <input className="mg-sm" type="radio" checked={state.sort === "RATING_D"} name="sort" value="RATING_D" id="sortByRating" onChange={(e) => filterDispatch({ type: "SORT", payload: e.target.value })}  />
                 <label htmlFor="sortByRating">Ratings(High to Low)</label> <br />
             </div>
         </aside>

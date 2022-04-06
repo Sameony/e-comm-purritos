@@ -1,8 +1,13 @@
 import React from "react";
 import AddRemoveButtons from "./addRemoveButtons";
 
-const WishCard = ({ sr, img, prodName, unitPrice, Action }) => {
-
+const WishCard = ({ id, sr, img, prodName, unitPrice, Action }) => {
+  const defaultState = {
+    id : id,
+    imageUrl: img,
+    title: prodName,
+    price: unitPrice,
+}
   return (
     <div className={Action==="prod"?"wishContainer textCenter":""}>
       <div className="wishStrip mg-y-md">
@@ -16,7 +21,7 @@ const WishCard = ({ sr, img, prodName, unitPrice, Action }) => {
           {unitPrice}
         </h3>
         <div className="wishActionButtons pd-r-sm">
-          {Action==="Actions" ? <h3>Actions</h3>: <AddRemoveButtons />}
+          {Action==="Actions" ? <h3>Actions</h3>: <AddRemoveButtons defaultState={defaultState} />}
         </div>
       </div>
     </div>

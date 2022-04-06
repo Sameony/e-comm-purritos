@@ -1,38 +1,37 @@
 import React from "react";
 import { WishCard } from "../components";
-
+import { useWishlist } from "../utils/wishlistContext";
+import { EmptyProduct } from "../components";
 const Wishlist = () => {
+  const {state} = useWishlist();
+  const wishlist = state.wishlistItems;
+  const wishListMapping = () =>
+    wishlist.map((item, index) => {
+      return (
+        <WishCard
+          key={item.id}
+          id={item.id}
+          sr = {index+1}
+          prodName={item.title}
+          unitPrice={item.price}
+          prevPrice={item.prevPrice}
+          img={item.imageUrl}
+          Action={"prod"}
+        />
+      );
+    });
   return (
     <div className="wishWrap">
       <h1 className="textCenter mg-b-lg">My Wishlist</h1>
       <WishCard sr={"#"}
-      prodName={"Product Name"}
-      unitPrice={"Unit Price"}
-      img={"Image"}
-      Action={"Actions"}
+        prodName={"Product Name"}
+        unitPrice={"Unit Price"}
+        img={"Image"}
+        Action={"Actions"}
       />
-      
-      <WishCard sr={"1"}
-      prodName={"Red blanket (does not include cat)"}
-      unitPrice={"11999"}
-      img={"Images/kyotRedBlanky.jpg"}
-      Action={"prod"}
-      />
-      <WishCard sr={"2"}
-      prodName={"Red blanket (does not include cat)"}
-      unitPrice={"11999"}
-      img={"Images/kyotRedBlanky.jpg"}
-      Action={"prod"} />
-      <WishCard sr={"3"}
-      prodName={"Red blanket (does not include cat)"}
-      unitPrice={"11999"}
-      img={"Images/kyotRedBlanky.jpg"}
-      Action={"prod"} />
-      <WishCard sr={"4"}
-      prodName={"Red blanket (does not include cat)"}
-      unitPrice={"11999"}
-      img={"Images/kyotRedBlanky.jpg"}
-      Action={"prod"} />
+
+      {wishlist.length ? wishListMapping():EmptyProduct("WISHLIST")}
+
     </div>
   );
 };

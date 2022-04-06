@@ -9,6 +9,7 @@ const Products = () => {
       return (
         <ProductCard
           key={item._id}
+          id = {item._id}
           cardTitle={item.title}
           cardReviews={item.reviews}
           cardRating={item.rating}
@@ -25,10 +26,8 @@ const Products = () => {
       
       <Filters />
       <div></div>
-      {prodList.length ? (
-        <div className="pageContent pd-md">{productMapping()}</div>
-      ) : (
-        <EmptyProduct />
+      {prodList.length ? (<div className="pageContent pd-md">{productMapping()}</div>) 
+      : EmptyProduct("PRODUCT"
       )}
     </div></>
     
