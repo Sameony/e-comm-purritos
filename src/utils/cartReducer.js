@@ -1,6 +1,7 @@
 import { useCart } from "./cartContext";
 
 export const CartReducer = (state, action) => {
+  console.log(action.payload)  
   switch (action.type) {
     case "CART_ADD":
       return  { ...state, CartItems: [...state.CartItems, action.payload] }
@@ -11,6 +12,13 @@ export const CartReducer = (state, action) => {
           (item) => item.id !== action.payload.id
         ),
       };
+    case "CART_QUANTITY":
+      return {
+        ...state,
+        CartItems: state.CartItems.map((item)=>{ 
+            item.quantity=item.id===action.payload.id?action.payload.quantity:item.quantity
+          return item})
+      }
     default:
       return state;
   }

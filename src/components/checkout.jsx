@@ -12,7 +12,7 @@ const Checkout = () => {
     let delivery = 20*total.count;
     
   return (
-    <div className="basicLight pd-md align-middle textCenter mg-md">
+    <div className="basicLight shadows pd-md align-middle textCenter mg-md">
                 <h2 className="fs-xl">Checkout Details</h2>
                 <hr />
                 <div className="pd-sm flex mg-y-md flex-spc-btw">
