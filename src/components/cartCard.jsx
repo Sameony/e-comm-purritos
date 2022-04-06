@@ -1,6 +1,14 @@
 import React from "react";
-
-const CartCard = (Title, img, price) => {
+import { useCart } from "../utils/cartContext";
+const CartCard = ({id, Title, img, price, quantity}) => {
+  const cartDefault = {
+    id : id,
+    imageUrl: img,
+    title: Title,
+    price: price,
+    quantity: quantity,
+}
+  const {dispatchCart}= useCart();
   return (
     <div className="cartStrip mg-y-md">
       <div className="cartImg align-items-center">
@@ -13,20 +21,21 @@ const CartCard = (Title, img, price) => {
         </h3>
         <div className="cartQty">
           <button className="btn btn-primary">&nbsp;-&nbsp;</button>
-          <input type="text" name="cartInput" value="2" />
+          <input type="text" name="cartInput" value={quantity} />
           <button className="btn btn-primary">+</button>
         </div>
 
         <div className="cartActionButtons flex flex-col flex-spc-arnd pd-r-sm">
           <button className="btn btn-wishlist mg-y-sm">
-            <i className="fas fa-heart mg-r-sm"></i>Add to Wishlist
+            <i className="fas fa-heart mg-r-sm"></i>Move to Wishlist
           </button>
-          <button className="btn btn-primary mg-b-sm">
+          <button className="btn btn-primary mg-b-sm" onClick={()=>dispatchCart({type:"CART_REMOVE",payload:cartDefault})}>
             <i className="fas fa-trash mg-r-sm"></i>Remove from cart
           </button>
         </div>
       </div>
     </div>
+    
   );
 };
 
