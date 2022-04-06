@@ -14,18 +14,18 @@ const CartCard = ({id, title, img, price, quantity}) => {
 }
   const {dispatchCart}= useCart();
   return (
-    <div className="cartStrip mg-y-md">
+    <div className="cartStrip shadows mg-y-md pd-l-sm">
       <div className="cartImg align-items-center">
         <img src={img} alt={title} />
       </div>
       <div className="cartDetails align-items-center flex-col">
         <h3>{title}</h3>
         <h3 className="fw-xl">
-          <i className="fa-solid fa-indian-rupee-sign mg-r-sm"></i>{price}
+          <i className="fas fa-rupee-sign mg-r-sm"></i>{price}
         </h3>
         <div className="cartQty">
           <button className="btn btn-primary">&nbsp;-&nbsp;</button>
-          <input type="text" name="cartInput" value={quantity} />
+          <input type="text" name="cartInput" value={quantity}  />
           <button className="btn btn-primary">+</button>
         </div>
 

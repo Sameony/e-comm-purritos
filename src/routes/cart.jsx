@@ -23,7 +23,8 @@ const Cart = () => {
     });
   return (
     <>
-      <div className="basicDark">
+    <div className="navShadow"></div>
+      <div className="basicLight">
         <h1 className="textCenter mg-b-lg">My Cart</h1>
         <div className="cartPage">
           <div className="cartWrap">

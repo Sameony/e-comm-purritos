@@ -5,8 +5,7 @@ import { EmptyProduct } from "../components";
 const Wishlist = () => {
   const {state} = useWishlist();
   const wishlist = state.wishlistItems;
-  const wishListMapping = () =>
-    wishlist.map((item, index) => {
+  const wishListMapping = () =>wishlist.map((item, index) => {
       return (
         <WishCard
           key={item.id}
@@ -19,19 +18,22 @@ const Wishlist = () => {
         />
       );
     });
+    
+  
   return (
-    <div className="wishWrap">
-      <h1 className="textCenter mg-b-lg">My Wishlist</h1>
-      <WishCard sr={"#"}
+    <>
+      <div className="navShadow"></div>
+      <div className="wishWrap">
+        <h1 className="textCenter mg-b-lg">My Wishlist</h1>
+        {wishlist.length ?<WishCard sr={"#"}
         prodName={"Product Name"}
         price={"Unit Price"}
         img={"Image"}
         Action={"Actions"}
-      />
-
-      {wishlist.length ? wishListMapping():EmptyProduct("WISHLIST")}
-
-    </div>
+      />:``}
+        {wishlist.length ?(wishListMapping()):EmptyProduct("WISHLIST")}
+      </div>
+    </>
   );
 };
 

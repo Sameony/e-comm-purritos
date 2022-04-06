@@ -1,9 +1,3 @@
-.wishWrap {
-  background-color: var(--darc);
-}
-.wishWrap h1 {
-  color: var(--snow);
-}
 .wishStrip {
   display: grid;
   grid-template-columns:

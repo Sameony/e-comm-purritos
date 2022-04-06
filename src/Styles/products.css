@@ -87,6 +87,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.cardActionButtons Link {
+  padding: 0.2rem;
+}
 .cardActionButtons .btn {
   border-radius: 3px;
 }

@@ -9,15 +9,15 @@ const WishCard = ({ id, sr, img, prodName, price, Action }) => {
     price: price,
 }
   return (
-    <div className={Action==="prod"?"wishContainer textCenter":""}>
-      <div className="wishStrip basicLight mg-y-md">
-        <h3>{sr}</h3>
+    <div className={Action==="prod"?"wishContainer textCenter shadows":"shadows"}>
+      <div className="wishStrip mg-y-md">
+        <h3>#{sr==="#"?"":sr}</h3>
         <div className="wishImg align-items-center">
           {img === "Image" ? <h3>Image</h3> : <img src={img} alt="kyot cat" />}
         </div>
         <h3>{prodName}</h3>
         <h3>
-          <i className="fas fa-rupee-sign mg-r-sm">{price}</i>
+          {price==="Unit Price"?<>{price}</>:<i className="fas fa-rupee-sign mg-r-sm">{price}</i>}
           
         </h3>
         <div className="wishActionButtons pd-r-sm">
