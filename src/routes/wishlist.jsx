@@ -13,8 +13,7 @@ const Wishlist = () => {
           id={item.id}
           sr = {index+1}
           prodName={item.title}
-          unitPrice={item.price}
-          prevPrice={item.prevPrice}
+          price={item.price}
           img={item.imageUrl}
           Action={"prod"}
         />
@@ -25,7 +24,7 @@ const Wishlist = () => {
       <h1 className="textCenter mg-b-lg">My Wishlist</h1>
       <WishCard sr={"#"}
         prodName={"Product Name"}
-        unitPrice={"Unit Price"}
+        price={"Unit Price"}
         img={"Image"}
         Action={"Actions"}
       />

@@ -13,8 +13,8 @@ const Cart = () => {
         <CartCard
           key={item.id}
           id={item.id}
-          Title={item.title}
-          Price={item.price}
+          title={item.title}
+          price={item.price}
           img={item.imageUrl}
           quantity = {item.quantity}
         />
@@ -23,7 +23,7 @@ const Cart = () => {
     });
   return (
     <>
-      <div className="filters">
+      <div className="basicDark">
         <h1 className="textCenter mg-b-lg">My Cart</h1>
         <div className="cartPage">
           <div className="cartWrap">
