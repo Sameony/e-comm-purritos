@@ -131,6 +131,6 @@
 }
 
 .wishListIcon:hover {
-  transition: all ease-in 0.5s;
-  transform: rotateY(360deg);
+  transition: all ease-in 0.3s;
+  transform: rotateY(-180deg);
 }

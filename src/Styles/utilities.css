@@ -1,0 +1,8 @@
+.basicDark {
+  background-color: var(--darc);
+  color: var(--snow);
+}
+.basicLight {
+  background-color: var(--snow);
+  color: var(--darc);
+}

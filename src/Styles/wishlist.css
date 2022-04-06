@@ -5,8 +5,6 @@
   color: var(--snow);
 }
 .wishStrip {
-  color: var(--darc);
-  background-color: var(--snow);
   display: grid;
   grid-template-columns:
     4rem minmax(13rem, 1fr)
