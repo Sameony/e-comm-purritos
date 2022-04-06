@@ -1,7 +1,6 @@
 import { useWishlist } from "./wishlistContext";
 
 export const wishListReducer = (state, action) => {
-  console.log(action.payload);
   switch (action.type) {
     case "WISH_ADD":
       return  { ...state, wishlistItems: [...state.wishlistItems, action.payload] }

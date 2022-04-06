@@ -31,7 +31,7 @@ export const FilterContextProvider = ({ children }) => {
     ratingFunction,
     CategoryHandler,
   )(products);
-  console.log(filteredList);
+  
 
   return (
     <FilterContext.Provider value={{ state, filterDispatch, filteredList }}>
