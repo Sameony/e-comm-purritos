@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { useWishlist } from "../utils/wishlistContext";
+import { useCart } from "../utils/cartContext";
 const NavBar = () => {
   const {state} = useWishlist();
+  const cartState = useCart();
   return (
       <>
     <nav className="navBar">
@@ -25,7 +27,7 @@ const NavBar = () => {
           <Link to="cart">
             <div className="fs-xl fas fa-shopping-cart"></div>
           </Link>
-          <div className="fs-sm badge badgeTopRight badgeRed">8</div>
+          <div className="fs-sm badge badgeTopRight badgeRed">{cartState.state.CartItems.length>9?("9+"):cartState.state.CartItems.length}</div>
         </div>
         <div className="badgeWrap mg-md">
           <Link to="/wishlist">
