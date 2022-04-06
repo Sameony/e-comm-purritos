@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import { FilterContextProvider } from "./utils/filterContext";
 import { WishlistContextProvider } from "./utils/wishlistContext";
+import { CartContextProvider } from "./utils/cartContext";
 import { makeServer } from "./server";
 
 // Call make Server
@@ -15,11 +16,13 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <WishlistContextProvider>
-        <FilterContextProvider>
-          <App />
-        </FilterContextProvider>
-      </WishlistContextProvider>
+      <CartContextProvider>
+        <WishlistContextProvider>
+          <FilterContextProvider>
+            <App />
+          </FilterContextProvider>
+        </WishlistContextProvider>
+      </CartContextProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
