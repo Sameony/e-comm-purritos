@@ -1,13 +1,24 @@
 import React from "react";
 import { FeaturedCard, HeroBanner } from "../components";
-
+import { GetCategory } from "../utils/categoryContext";
 const Landing = () => {
+  const {categories} = GetCategory();
+  const categoryMapper = () =>categories?.map((item) => {
+    return (
+      <FeaturedCard
+      key={item._id}
+      _id={item._id}
+      disName={item.disName}
+      coverImg={item.coverImg}
+      description={item.description}
+      />
+    );
+  });
   return (
-    <div className="landingWrapper">
+    <div className="landingWrapper pureLight">
       <HeroBanner />
       <div className="frontCards">
-        <FeaturedCard heading="40% off on Red Blankets" button="Check it out" />
-        <FeaturedCard heading="Special white day blankets" button="Go white" />
+        {categoryMapper()}
       </div>
     </div>
   );

@@ -6,3 +6,11 @@
   background-color: var(--snow);
   color: var(--darc);
 }
+.pureLight {
+  background-color: var(--snow);
+  color: var(--snow);
+}
+.pureDark {
+  background-color: var(--darc);
+  color: var(--darc);
+}

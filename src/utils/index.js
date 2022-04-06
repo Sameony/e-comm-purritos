@@ -6,8 +6,11 @@ import {
   sortprodList,
   pricingFunction,
 } from "./filterComposition";
-import { useProducts } from "./axiosProduct";
-import { GetProducts } from "./productContext";
+import { WishlistContextProvider } from "./wishlistContext";
+import { CartContextProvider } from "./cartContext";
+import { CategoryProvider } from "./categoryContext";
+import { useProducts } from "./productContext";
+import useAxios from "./axiosProduct";
 
 export {
   FilterContextProvider,
@@ -18,5 +21,8 @@ export {
   sortprodList,
   pricingFunction,
   useProducts,
-  GetProducts,
+  CategoryProvider,
+  WishlistContextProvider,
+  CartContextProvider,
+  useAxios
 };

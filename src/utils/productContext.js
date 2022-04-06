@@ -1,15 +1,19 @@
-// import { axioProducts } from "../utils/axiosProduct";
+import useAxios from "./axiosProduct";
 import { createContext, useContext } from "react";
-import { products } from "../backend/db/products";
+import { useState } from "react";
 
-const ProductContext = createContext(products);
+const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
+  const [api, setApi] = useState("/api/products");
+  const {responseData, loading, errorFlag} = useAxios(api);
+  const products = responseData?.products||[];
+  console.log(products)
   return (
     <ProductContext.Provider value={{ products }}>
       {children}
     </ProductContext.Provider>
   );
 };
-export const GetProducts = () => useContext(ProductContext);
+export const useProducts = () => useContext(ProductContext);
 

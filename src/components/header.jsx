@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { useWishlist } from "../utils/wishlistContext";
 import { useCart } from "../utils/cartContext";
-import { GiShop } from 'react-icons/gi';
 const NavBar = () => {
   const {state} = useWishlist();
   const cartState = useCart();
@@ -24,8 +23,8 @@ const NavBar = () => {
         <Link to="/login" className="btn btn-primary mg-r-md">
           Signup
         </Link>
-        <Link to="/products" className=" align-items-center fs-xl mg-x-md">
-          <GiShop />
+        <Link to="/products" className="align-items-center fs-xl mg-x-md">
+        <i className="fas fa-store"></i>
         </Link>
         <div className="badgeWrap mg-md">
           <Link to="cart">
