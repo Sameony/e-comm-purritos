@@ -44,8 +44,13 @@ const ProductCard = ({id, cardTitle, cardReviews, cardRating, Price, prevPrice, 
                 </div>
                 
                 <div className='cardActionButtons'>
-                    <button className="btn btn-success fs-md mg-t-sm"><i className="fas fa-shopping-cart mg-r-sm"></i>Add to
-                        Cart</button>
+                    {IsItemInCart(id)===false?(<button className="btn btn-success fs-md mg-t-sm" onClick={()=>dispatchCart({type:"CART_ADD",payload:cartDefault})}>
+                                <i className="fas fa-shopping-cart mg-r-sm">  </i>Add to Cart
+                            </button>)
+                        :(<Link to="/Cart" className="btn btn-success fs-md mg-y-sm textCenter">
+                                <i  className="fas fa-shopping-cart mg-r-sm"> </i>Go to Cart
+                            </Link>)
+                    }
                 </div>
                     
                     

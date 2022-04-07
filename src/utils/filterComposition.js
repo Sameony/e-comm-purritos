@@ -7,7 +7,7 @@ export const ratingFunction = (state, prodList) => {
 
 export const pricingFunction = (state, prodList) => {
   const { maxPrice } = state;
-  return prodList.filter((product) => product.price <= maxPrice);
+  return prodList?.filter((product) => product.price <= maxPrice)||[];
 };
 
 export const sortprodList = (state, prodList) => {

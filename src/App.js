@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" element={<LoginSignup />} />
         <Route path="*" element={<Invalid/>} />
       </Routes>
-      <Footer />
+      
     </div>
   );
 }

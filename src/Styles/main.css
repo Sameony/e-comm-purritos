@@ -9,8 +9,6 @@
 
 /* Navigation */
 .navBar {
-  background-color: var(--darc);
-  color: var(--snow);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +19,7 @@
   cursor: pointer;
 }
 .navShadow {
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgb(130, 129, 129));
   height: 1rem;
 }
 .navBar .badgeWrap {

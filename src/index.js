@@ -5,9 +5,9 @@ import App from "./App";
 import {
   BrowserRouter as Router
 } from 'react-router-dom';
-import { FilterContextProvider } from "./utils/filterContext";
-import { WishlistContextProvider } from "./utils/wishlistContext";
+import { WishlistContextProvider, CategoryProvider, FilterContextProvider, CartContextProvider } from "./utils";
 import { makeServer } from "./server";
+import { ProductProvider } from "./utils/productContext";
 
 // Call make Server
 makeServer();
@@ -15,11 +15,17 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <WishlistContextProvider>
-        <FilterContextProvider>
-          <App />
-        </FilterContextProvider>
-      </WishlistContextProvider>
+    <ProductProvider>
+      <CategoryProvider>
+        <CartContextProvider>
+          <WishlistContextProvider>
+            <FilterContextProvider>
+                <App />
+            </FilterContextProvider>
+          </WishlistContextProvider>
+        </CartContextProvider>
+      </CategoryProvider>
+    </ProductProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

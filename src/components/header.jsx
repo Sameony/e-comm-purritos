@@ -6,7 +6,7 @@ const NavBar = () => {
   const {state} = useWishlist();
   return (
       <>
-    <nav className="navBar">
+    <nav className="navBar basicDark">
       <Link to="/">
         <h1 className="pd-x-md mg-x-md fs-xxl">Purritos</h1>
       </Link>
@@ -18,8 +18,11 @@ const NavBar = () => {
       </div>
 
       <div className="rightNav">
-        <Link to="/login" className="btn btn-primary">
+        <Link to="/login" className="btn btn-primary mg-r-md">
           Signup
+        </Link>
+        <Link to="/products" className="align-items-center fs-xl mg-x-md">
+        <i className="fas fa-store"></i>
         </Link>
         <div className="badgeWrap mg-md">
           <Link to="cart">

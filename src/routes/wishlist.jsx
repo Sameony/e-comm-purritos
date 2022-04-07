@@ -5,34 +5,35 @@ import { EmptyProduct } from "../components";
 const Wishlist = () => {
   const {state} = useWishlist();
   const wishlist = state.wishlistItems;
-  const wishListMapping = () =>
-    wishlist.map((item, index) => {
+  const wishListMapping = () =>wishlist.map((item, index) => {
       return (
         <WishCard
           key={item.id}
           id={item.id}
           sr = {index+1}
           prodName={item.title}
-          unitPrice={item.price}
-          prevPrice={item.prevPrice}
+          price={item.price}
           img={item.imageUrl}
           Action={"prod"}
         />
       );
     });
+    
+  
   return (
-    <div className="wishWrap">
-      <h1 className="textCenter mg-b-lg">My Wishlist</h1>
-      <WishCard sr={"#"}
+    <>
+      <div className="navShadow"></div>
+      <div className="wishWrap">
+        <h1 className="textCenter mg-b-lg">My Wishlist</h1>
+        {wishlist.length ?<WishCard sr={"#"}
         prodName={"Product Name"}
-        unitPrice={"Unit Price"}
+        price={"Unit Price"}
         img={"Image"}
         Action={"Actions"}
-      />
-
-      {wishlist.length ? wishListMapping():EmptyProduct("WISHLIST")}
-
-    </div>
+      />:``}
+        {wishlist.length ?(wishListMapping()):EmptyProduct("WISHLIST")}
+      </div>
+    </>
   );
 };
 
