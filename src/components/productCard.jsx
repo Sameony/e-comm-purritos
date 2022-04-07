@@ -1,14 +1,23 @@
 import React from 'react'
 import { IsItemInWishList } from '../utils/wishlistReducer';
 import { useWishlist } from '../utils/wishlistContext';
-
+import { useCart } from '../utils/cartContext';
+import { IsItemInCart } from '../utils/cartReducer';
+import { Link } from "react-router-dom";
 const ProductCard = ({id, cardTitle, cardReviews, cardRating, Price, prevPrice, img}) => {
     const {dispatchWish} = useWishlist();
+    const {dispatchCart} = useCart();
     const rounded = Math.round(cardRating*2)/2
     const hasDecimal = rounded%1!==0;
     const roundedWhole = Math.floor(rounded);
     const stars = hasDecimal?roundedWhole+1:roundedWhole;
-    
+    const cartDefault = {
+        id : id,
+        imageUrl: img,
+        title: cardTitle,
+        price: Price,
+        quantity: 1,
+    }
     const defaultState = {
         id : id,
         imageUrl: img,
