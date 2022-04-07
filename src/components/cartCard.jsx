@@ -27,7 +27,7 @@ useEffect(() => {
       <div className="cartDetails align-items-center flex-col">
         <h3>{title}</h3>
         <h3 className="fw-xl">
-          <i className="fas fa-rupee-sign mg-r-sm"></i>{price*quantity}
+          <i className="fas fa-rupee-sign mg-r-sm"></i>{price}
         </h3>
         <div className="cartQty">
           <button className="btn btn-primary" onClick={()=>setCount(count-1)}> &nbsp;-&nbsp;</button>
