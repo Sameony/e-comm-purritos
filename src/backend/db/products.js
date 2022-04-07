@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    imageUrl: "Images/kyotPeek.jpg",
+    imageUrl: "/public/Images/kyotPeek.jpg",
     isLiked: false,
     title: "Exquisite Blanket",
     color: "brown",
@@ -20,7 +20,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/pawPlainBlanky.png",
+    imageUrl: "/public/Images/pawPlainBlanky.png",
     isLiked: true,
     title: "Phenomenal soft blanket",
     color: "grey",
@@ -32,7 +32,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/squishCat.png",
+    imageUrl: "/public/Images/squishCat.png",
     isLiked: false,
     title: "Phenomenal soft blanket",
     color: "grey",
@@ -44,7 +44,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/kyotComfy.jpg",
+    imageUrl: "/public/Images/kyotComfy.jpg",
     isLiked: true,
     title: "Thin all weather blanket",
     color: "grey",
@@ -56,7 +56,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/kyotAsleep2.jpg",
+    imageUrl: "/public/Images/kyotAsleep2.jpg",
     isLiked: false,
     title: "Precious striped Blanket",
     color: "brown",
@@ -68,7 +68,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/sleepPatternBlanket.png",
+    imageUrl: "/public/Images/sleepPatternBlanket.png",
     isLiked: false,
     title: "Exquisite designer blanket",
     color: "golden",
@@ -80,7 +80,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/unknown.png",
+    imageUrl: "/public/Images/unknown.png",
     isLiked: false,
     title: "Ferocious blanket",
     color: "white",
@@ -92,7 +92,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/sleepPlainBlanket.png",
+    imageUrl: "/public/Images/sleepPlainBlanket.png",
     isLiked: true,
     title: "Ultra-Soft thin blanket",
     color: "white",
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/sweaterGrey.png",
+    imageUrl: "/public/Images/sweaterGrey.png",
     isLiked: false,
     title: "Ultra-Soft sweater",
     color: "grey",
@@ -116,7 +116,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/ultraThinBlanky.png",
+    imageUrl: "/public/Images/ultraThinBlanky.png",
     isLiked: true,
     title: "Ultra Thin catsheet",
     color: "white",
@@ -128,7 +128,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/kyotHugCat.jpg",
+    imageUrl: "/public/Images/kyotHugCat.jpg",
     isLiked: false,
     title: "Ultra-soft Sweater",
     color: "brown",
@@ -140,7 +140,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/woolBed.png",
+    imageUrl: "/public/Images/woolBed.png",
     isLiked: true,
     title: "Baba White Sheep wool",
     color: "white",
@@ -152,7 +152,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/sweaterBasket.png",
+    imageUrl: "/public/Images/sweaterBasket.png",
     isLiked: false,
     title: "Soft white Sweater",
     color: "white",
@@ -164,7 +164,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/sweaterGrey2.png",
+    imageUrl: "/public/Images/sweaterGrey2.png",
     isLiked: false,
     title: "Ultra-Soft sweater",
     color: "grey",
@@ -176,7 +176,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/bluPattern.png",
+    imageUrl: "/public/Images/bluPattern.png",
     isLiked: false,
     title: "Exquisite Thin catsheet",
     color: "blue",
@@ -188,7 +188,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "Images/catSweater.png",
+    imageUrl: "/public/Images/catSweater.png",
     isLiked: false,
     title: "Cat Turtle Neck Sweater",
     color: "white",
