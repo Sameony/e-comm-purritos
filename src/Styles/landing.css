@@ -6,7 +6,7 @@
       rgba(139, 139, 139, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(/public/images/kyotPeek.jpg);
+    url("https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348718/purritos/kyotPeek_w2hzr1.jpg");
 
   height: calc(100vh - 20rem);
   background-position: center;
@@ -46,14 +46,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.m1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/public/images/kyotComfy.jpg);
-}
-.m2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/public/images/kyotRedBlanky.jpg);
-}
+
 .miniHero p {
   font-size: 0.6rem;
 }

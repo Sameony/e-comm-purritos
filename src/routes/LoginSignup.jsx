@@ -91,13 +91,13 @@ const LoginSignup = () => {
             <h1>Welcome back!</h1>
           </div>
           <div className="img sign-in">
-            <img src="Images/kyotHugCat.jpg" alt />
+            <img src="https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348706/purritos/kyotHugCat_dldvh4.jpg" alt="anotherCat" />
           </div>
         </div>
         {/* Sign up */}
         <div className="half-wrapper align-items-center flex-col">
           <div className="img sign-up">
-            <img src="Images/kyotComfy.jpg" alt />
+            <img src="https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348704/purritos/kyotComfy_pzgcmt.jpg" alt="catpic" />
           </div>
           <div className="offPageContent sign-up">
             <h1>Join our family!</h1>

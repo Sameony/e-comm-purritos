@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    imageUrl: "/public/images/kyotPeek.jpg",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348718/purritos/kyotPeek_w2hzr1.jpg",
     isLiked: false,
     title: "Exquisite Blanket",
     color: "brown",
@@ -20,7 +20,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/pawPlainBlanky.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348719/purritos/pawPlainBlanky_trnkba.png",
     isLiked: true,
     title: "Phenomenal soft blanket",
     color: "grey",
@@ -32,7 +32,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/squishCat.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348697/purritos/whiteFluffBall_vywkzv.png",
     isLiked: false,
     title: "Phenomenal soft blanket",
     color: "grey",
@@ -40,11 +40,11 @@ export const products = [
     price: 11999,
     reviews: "629",
     rating: 4.8,
-    categoryName: "plain-blankets",
+    categoryName: "pattern-blankets",
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/kyotComfy.jpg",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348704/purritos/kyotComfy_pzgcmt.jpg",
     isLiked: true,
     title: "Thin all weather blanket",
     color: "grey",
@@ -56,7 +56,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/kyotAsleep2.jpg",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348722/purritos/kyotAsleep2_nyidyy.jpg",
     isLiked: false,
     title: "Precious striped Blanket",
     color: "brown",
@@ -68,7 +68,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/sleepPatternBlanket.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348707/purritos/sleepPatternBlanket_uc0n6i.png",
     isLiked: false,
     title: "Exquisite designer blanket",
     color: "golden",
@@ -80,7 +80,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/unknown.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348696/purritos/unknown_pcwtwg.png",
     isLiked: false,
     title: "Ferocious blanket",
     color: "white",
@@ -92,7 +92,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/sleepPlainBlanket.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348721/purritos/sleepPlainBlanket_cxzrst.png",
     isLiked: true,
     title: "Ultra-Soft thin blanket",
     color: "white",
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/sweaterGrey.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348712/purritos/sweaterGrey2_sbepm0.png",
     isLiked: false,
     title: "Ultra-Soft sweater",
     color: "grey",
@@ -116,7 +116,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/ultraThinBlanky.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348714/purritos/ultraThinBlanky_aa4aow.png",
     isLiked: true,
     title: "Ultra Thin catsheet",
     color: "white",
@@ -128,7 +128,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/kyotHugCat.jpg",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348706/purritos/kyotHugCat_dldvh4.jpg",
     isLiked: false,
     title: "Ultra-soft Sweater",
     color: "brown",
@@ -140,7 +140,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/woolBed.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348697/purritos/woolBed_okej7t.png",
     isLiked: true,
     title: "Baba White Sheep wool",
     color: "white",
@@ -152,7 +152,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/sweaterBasket.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348710/purritos/sweaterBasket_lua3f4.png",
     isLiked: false,
     title: "Soft white Sweater",
     color: "white",
@@ -164,7 +164,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/sweaterGrey2.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348711/purritos/sweaterGrey_tvx79o.png",
     isLiked: false,
     title: "Ultra-Soft sweater",
     color: "grey",
@@ -176,7 +176,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/bluPattern.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348701/purritos/bluPattern_zmbzpl.png",
     isLiked: false,
     title: "Exquisite Thin catsheet",
     color: "blue",
@@ -188,7 +188,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: "/public/images/catSweater.png",
+    imageUrl: "https://res.cloudinary.com/ddqawrqs1/image/upload/v1649348698/purritos/catSweater_jcjdrl.png",
     isLiked: false,
     title: "Cat Turtle Neck Sweater",
     color: "white",
